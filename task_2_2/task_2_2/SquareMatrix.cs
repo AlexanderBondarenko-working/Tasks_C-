@@ -62,23 +62,23 @@ namespace task_2_2
         
         public string MatrixTostring()
         {
-            string result = "";
+            StringBuilder result = new StringBuilder();
             for(int i = 0; i < diagonal.Length; i++)
             {
                 for(int j = 0; j < diagonal.Length; j++)
                 {
                     if(i == j)
                     {
-                        result += diagonal[i].ToString();
+                        result.Append(diagonal[i].ToString());
                     }
                     else
                     {
-                        result += "0";
+                        result.Append("0");
                     }
                 }
-                result += '\n';
+                result.Append("\n");
             }
-            return result;
+            return result.ToString();
         }
 
         public SquareMatrix Add(SquareMatrix matrix)
